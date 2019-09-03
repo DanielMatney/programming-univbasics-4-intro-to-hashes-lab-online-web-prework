@@ -44,8 +44,9 @@ def update_counting_hash(hash, key)
   newcount = {
     hash => key
   }
-  if newcount[key] == false
-    newcount[key] = 1
+  if newcount[key]
+    newcount[key] += 1
+  else newcount[key] = 1
   end
   newcount[key]
 end
